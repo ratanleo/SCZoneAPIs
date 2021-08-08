@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "e045b5ed-a607-458c-b844-27fe64e26e3d",
+		"name": "SCZone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": " password",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": " openid email profile read write",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": " SCZRegOfficer@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": " 7694f4a66316e53c8cdd9d9954bd611d",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": " scz-web-portal",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": " sczportalsecret",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://sczsit.microclearcloud.com/",
+					"protocol": "https",
+					"host": [
+						"sczsit",
+						"microclearcloud",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Menus",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6ImF0K2p3dCJ9.eyJuYmYiOjE2Mjg0OTg3MjMsImV4cCI6MTYyODU4NTEyMywiaXNzIjoiaHR0cDovL3NjemlkcC5taWNyb2NsZWFyY2xvdWQuY29tIiwiYXVkIjpbImluYm94LWFwaSIsInNjei13ZWItcG9ydGFsIiwiaHR0cDovL3NjemlkcC5taWNyb2NsZWFyY2xvdWQuY29tL3Jlc291cmNlcyJdLCJjbGllbnRfaWQiOiJzY3otd2ViLXBvcnRhbCIsInN1YiI6IjBlOTNhMTgzLTMzMjYtNDM0NS1hYzc0LWVkMTJlZWY4MzJkYSIsImF1dGhfdGltZSI6MTYyODQ5ODcyMywiaWRwIjoibG9jYWwiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJTQ1pSZWdPZmZpY2VyQGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJTQ1pSZWdPZmZpY2VyQGdtYWlsLmNvbSIsIm5hbWUiOiJTQ1pSZWdPZmZpY2VyQGdtYWlsLmNvbSIsImVtYWlsIjoiU0NaUmVnT2ZmaWNlckBnbWFpbC5jb20iLCJpc19yYW5kb21fcGFzc3dvcmQiOiJGYWxzZSIsImVtYWlsX2lkIjoiU0NaUmVnT2ZmaWNlckBnbWFpbC5jb20iLCJVc2VySWQiOiIwZTkzYTE4My0zMzI2LTQzNDUtYWM3NC1lZDEyZWVmODMyZGEiLCJzZXNzaW9uX2lkIjoiY2IwM2E5OGMtYTM2Yy00ZjAxLTgzMTAtMGQ0ZDZjZTA5M2NmIiwiVGVuYW50SWQiOiIxIiwiZ2l2ZW5fbmFtZSI6IlJlZ2lzdHJhdGlvbiIsImZhbWlseV9uYW1lIjoiT2ZmaWNlciIsInRlbmFudF9pZCI6IjEiLCJvcmdhbml6YXRpb25faWQiOiIxIiwiZGVwYXJ0bWVudF9pZCI6IjAiLCJzdGFrZV9ob2xkZXIiOiJJIiwib3JnYW5pemF0aW9uX25hbWUiOiJBdXRob3JpdHkgT3JnYW5pemF0aW9uIiwicG9zdGluZ19uYW1lIjoiUmVnaXN0cmF0aW9uIE9mZmljZXIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiZDc3NTU1NTAtODBlZC00MjIyLThiMDctZWU4Yzg5NWM2N2Y1IiwiZjJkNmFjYTMtNjlhMS00MTdiLWE0YWItYThjYTE5MzhlNDAyIl0sInJvbGVfbmFtZSI6WyJTQ1pvbmVSZWdpc3RyYXRpb25PZmZpY2VyIiwiU3lzQ3VzdG9tcyJdLCJwaG9uZV9udW1iZXIiOiIxMjM0NTY3NzkzIiwicGhvbmVfbnVtYmVyX3ZlcmlmaWVkIjp0cnVlLCJqdGkiOiJBQjJCRTg5MUExQkVGMDcyMUEwRTYzNTFCRTEwQjU2MyIsImlhdCI6MTYyODQ5ODcyMywic2NvcGUiOlsiZW1haWwiLCJvcGVuaWQiLCJwcm9maWxlIiwicmVhZCIsIndyaXRlIl0sImFtciI6WyJwd2QiXX0.Q71L6t7zkjk1kwVKSZURbo12eUBcv0r-rO-MZORRKBi4AiP68cI_yb00U6JighTmB3ne5n4QXfpjnw1cUEfDGg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://sczapi.microclearcloud.com/framework-api/menus",
+					"protocol": "https",
+					"host": [
+						"sczapi",
+						"microclearcloud",
+						"com"
+					],
+					"path": [
+						"framework-api",
+						"menus"
+					]
+				},
+				"description": "to get menus of Registration User Login"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
