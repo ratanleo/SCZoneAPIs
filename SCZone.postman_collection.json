@@ -110,6 +110,45 @@
 				"description": "to get menus of Registration User Login"
 			},
 			"response": []
+		},
+		{
+			"name": "Inbox Messages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sczapi.microclearcloud.com/inbox-api/messages?page.index=1&page.size=10&order.property=msgDate&order.ascending=false",
+					"protocol": "https",
+					"host": [
+						"sczapi",
+						"microclearcloud",
+						"com"
+					],
+					"path": [
+						"inbox-api",
+						"messages"
+					],
+					"query": [
+						{
+							"key": "page.index",
+							"value": "1"
+						},
+						{
+							"key": "page.size",
+							"value": "10"
+						},
+						{
+							"key": "order.property",
+							"value": "msgDate"
+						},
+						{
+							"key": "order.ascending",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"auth": {
